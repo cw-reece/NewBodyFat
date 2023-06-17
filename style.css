@@ -1,0 +1,66 @@
+body{
+    background-color: #354f52;
+    color:#cad2c5 ;
+    font-family:cursive;
+    
+}
+
+h1{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#genderRadio{
+    display: flex;
+    justify-content: center;
+    background-color: #52796f;
+    border-style: solid;
+    box-sizing:border-box;
+    padding: 1em 5em;
+    margin: 1em;
+}
+
+#inputFields{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #52796f;
+    box-sizing: border-box;
+    border-style: solid;
+    padding: 1em 4em;
+    margin: 1em;
+}
+
+input{background-color: #84a98c;}
+
+button{
+    padding: 1em 5em;
+    font-size: 24px;
+    background-color: #84a98c;    
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-style: solid;
+    background-color: #84a98c;
+    width: fit-content;
+    margin:1em auto;
+    padding: 1em;   
+}
+
+div.pass{
+    color:#80ed99;
+}
+
+div.fail{
+    color:#d62828;
+}
