@@ -1,7 +1,7 @@
 body{
     background-color: #354f52;
     color:#cad2c5 ;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
     
 }
 
@@ -63,4 +63,9 @@ div.pass{
 
 div.fail{
     color:#d62828;
+}
+
+#nothingChecked{
+    display: none;
+    color: #fa3131;
 }
