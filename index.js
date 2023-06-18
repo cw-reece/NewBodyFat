@@ -13,13 +13,12 @@ document.querySelector("button").addEventListener("click", (e) => {
 	const ageCheck = document.getElementsByName("age");
 	let bodyFatPercent = 0;
 	const result = document.createElement("div");
-
 	if (document.querySelectorAll("input[type=radio]:checked").length === 0) {
 		document.getElementById("nothingChecked").style.display = "block";
-		document.querySelector("div").remove();
 	} else {
 		document.getElementById("nothingChecked").style.display = "none";
 	}
+
 	if (genderCheck[0].checked) {
 		bodyFatPercent = -26.97 - 0.12 * userWeight + 1.99 * userWaist;
 	} else if (genderCheck[1].checked) {
@@ -30,7 +29,6 @@ document.querySelector("button").addEventListener("click", (e) => {
 	}
 	if (userWaist == 0 || "" || userWeight == 0 || "") {
 		result.innerText = "please enter weight and waist Circumference";
-		document.querySelector("div").classList.add("fail");
 	} else {
 		result.innerText = `Bodyfat Percentage: ${bodyFatPercent.toFixed(2)}%`;
 	}
