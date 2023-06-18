@@ -13,7 +13,10 @@ document.querySelector("button").addEventListener("click", (e) => {
 	const ageCheck = document.getElementsByName("age");
 	let bodyFatPercent = 0;
 	const result = document.createElement("div");
-	if (document.querySelectorAll("input[type=radio]:checked").length === 0) {
+	if (
+		document.querySelectorAll("input[name=gender]:checked").length === 0 ||
+		document.querySelectorAll("input[name=age]:checked").length === 0
+	) {
 		document.getElementById("nothingChecked").style.display = "block";
 	} else {
 		document.getElementById("nothingChecked").style.display = "none";
@@ -33,48 +36,60 @@ document.querySelector("button").addEventListener("click", (e) => {
 		result.innerText = `Bodyfat Percentage: ${bodyFatPercent.toFixed(2)}%`;
 	}
 	document.body.append(result);
-	if (genderCheck[0].checked && ageCheck[0].checked && bodyFatPercent <= 20) {
+	if (
+		genderCheck[0].checked &&
+		ageCheck[0].checked &&
+		bodyFatPercent <= 20 &&
+		bodyFatPercent > 0
+	) {
 		document.querySelector("div").classList.add("pass");
 	} else if (
 		genderCheck[0].checked &&
 		ageCheck[1].checked &&
-		bodyFatPercent <= 22
+		bodyFatPercent <= 22 &&
+		bodyFatPercent > 0
 	) {
 		document.querySelector("div").classList.add("pass");
 	} else if (
 		genderCheck[0].checked &&
 		ageCheck[2].checked &&
-		bodyFatPercent <= 24
+		bodyFatPercent <= 24 &&
+		bodyFatPercent > 0
 	) {
 		document.querySelector("div").classList.add("pass");
 	} else if (
 		genderCheck[0].checked &&
 		ageCheck[3].checked &&
-		bodyFatPercent <= 26
+		bodyFatPercent <= 26 &&
+		bodyFatPercent > 0
 	) {
 		document.querySelector("div").classList.add("pass");
 	} else if (
 		genderCheck[1].checked &&
 		ageCheck[0].checked &&
-		bodyFatPercent <= 30
+		bodyFatPercent <= 30 &&
+		bodyFatPercent > 0
 	) {
 		document.querySelector("div").classList.add("pass");
 	} else if (
 		genderCheck[1].checked &&
 		ageCheck[1].checked &&
-		bodyFatPercent <= 32
+		bodyFatPercent <= 32 &&
+		bodyFatPercent > 0
 	) {
 		document.querySelector("div").classList.add("pass");
 	} else if (
 		genderCheck[1].checked &&
 		ageCheck[2].checked &&
-		bodyFatPercent <= 34
+		bodyFatPercent <= 34 &&
+		bodyFatPercent > 0
 	) {
 		document.querySelector("div").classList.add("pass");
 	} else if (
 		genderCheck[1].checked &&
 		ageCheck[3].checked &&
-		bodyFatPercent <= 36
+		bodyFatPercent <= 36 &&
+		bodyFatPercent > 0
 	) {
 		document.querySelector("div").classList.add("pass");
 	} else {
